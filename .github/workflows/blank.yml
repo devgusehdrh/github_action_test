@@ -26,3 +26,6 @@ jobs:
      
       - name: Run pwd
         run: cd / && pwd
+        
+      - name: Run pwd
+        run: cd / && pwd
