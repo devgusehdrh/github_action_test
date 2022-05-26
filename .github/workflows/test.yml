@@ -10,8 +10,6 @@ name: Spring Boot & Gradle CI/CD
 on:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
 
 jobs:
   build:
@@ -75,5 +73,5 @@ jobs:
           --application-name springboot \
           --deployment-group-name springboot-deploy \
           --file-exists-behavior OVERWRITE \
-          --s3-location bucket=deploy-bucket-coffee,bundleType=zip,key=springboot-intro-build.zip \
+          --s3-location bucket=final-coffee,bundleType=zip,key=springboot-intro-build.zip \
           --region ap-northeast-2
