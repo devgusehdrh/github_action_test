@@ -5,7 +5,7 @@ REPOSITORY=/home/ubuntu/sparta
 
 CONTAINER_ID=$(docker container ls -f "name=final" -q)
 
-echo "> 컨테이너 ID는 무엇?? ${CONTAINER_ID}"
+echo "> 컨테이너 ID : ${CONTAINER_ID}"
 
 if [ -z ${CONTAINER_ID} ]
 then
