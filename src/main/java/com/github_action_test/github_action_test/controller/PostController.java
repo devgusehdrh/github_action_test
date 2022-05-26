@@ -15,6 +15,11 @@ public class PostController {
     private final PostRepository postRepository;
     private final PostService postService;
     private final ReplyRepository replyRepository;
+    
+    @GetMapping("/")
+    public String home(){
+        return "Hello World!";
+    }
 
     @PostMapping("/api/posts")
     public Post creatPost(@RequestBody PostRequestDto requestDto){
