@@ -9,7 +9,7 @@ echo "> 컨테이너 ID는 무엇?? ${CONTAINER_ID}"
 
 if [ -z ${CONTAINER_ID} ]
 then
-  echo "> 현재 구동중인 애플리케이션이 없으므로 종료하지 않습니다." >> /home/docker/deploy.log
+  echo "> 현재 구동중인 애플리케이션이 없으므로 종료하지 않습니다." >> /home/ubuntu/docker/deploy.log
 else
   echo "> docker stop ${CONTAINER_ID}"
   sudo docker stop ${CONTAINER_ID}
@@ -18,5 +18,5 @@ else
   sleep 5
 fi
 
-cd /home/ubuntu/final && docker build -t final .
+cd /home/ubuntu/docker/image && docker build -t final .
 docker run --name final -d -e active=prod -p 8080:8080 final
