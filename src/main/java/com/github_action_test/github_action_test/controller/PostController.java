@@ -16,7 +16,7 @@ public class PostController {
     private final PostService postService;
     private final ReplyRepository replyRepository;
     
-    @GetMapping("/")
+    @GetMapping("/hello")
     public String home(){
         return "Hello World!";
     }
