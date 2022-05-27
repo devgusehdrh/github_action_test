@@ -20,4 +20,4 @@ fi
 sudo docker rm -f final
 sudo docker rmi final
 cd /home/ubuntu/docker/image && docker build -t final .
-docker run --name final -d -e active=prod -p 80:8080 final
+docker run --name final -d -e active=prod -p 8080:8080 final
